@@ -1,0 +1,8 @@
+overrides: "pyexcel.yaml"
+name: "pyexcel-matplotlib"
+nick_name: "matplotlib"
+version: "0.0.1"
+release: "0.0.1"
+dependencies: 
+  - matplotlib
+description: "Draw charts, diagrams using matplotlib"
