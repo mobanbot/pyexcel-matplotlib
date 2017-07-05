@@ -11,6 +11,6 @@ from pyexcel.plugins import PyexcelPluginChain
 
 
 PyexcelPluginChain(__name__).add_a_renderer(
-    relative_plugin_class_path='plot.SimpleLayout',
-    file_types=['svg']
+    relative_plugin_class_path='plot.MatPlotter',
+    file_types=['svg', 'png']
 )
