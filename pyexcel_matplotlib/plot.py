@@ -30,6 +30,20 @@ class Plotter(object):
         self._image_stream = image_stream
 
 
+@PluginInfo('plot', tags=['pie'])
+class Pie(Plotter):
+    def render_sheet(self, sheet, title=DEFAULT_TITLE,
+                     label_y_in_row=0, **keywords):
+        if len(sheet.colnames) == 0:
+            sheet.name_columns_by_row(label_y_in_row)
+        the_dict = sheet.to_dict()
+        fig, ax = plt.subplots()
+        ax.pie(the_dict.values(), labels=the_dict.keys(), **keywords)
+        ax.axis('equal')
+        ax.set_title(title)
+        fig.savefig(self._image_stream, format=self._file_type)
+
+
 @PluginInfo('plot', tags=['xy'])
 class XY(Plotter):
     def render_sheet(self, sheet,

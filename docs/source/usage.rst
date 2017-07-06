@@ -20,8 +20,7 @@ Pie chart
 
     title = 'Browser usage in February 2012 (in %)'
     sheet = pyexcel.get_sheet(file_name='pie.csv')
-    svg = sheet.plot(chart_type='pie',
-         title=title, width=600, height=400, explicit_size=True)
+    svg = sheet.plot(chart_type='pie', title=title)
 
 
 Box chart

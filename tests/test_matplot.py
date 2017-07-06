@@ -66,6 +66,23 @@ def test_xy_line():
     _validate_and_remove('single_xy_cosinus.png')
 
 
+def test_pie():
+    title = 'Browser usage in February 2012 (in %)'
+    data = OrderedDict()
+    data['IE'] = [19.5]
+    data['Firefox'] = [36.6]
+    data['Chrome'] = [36.3]
+    data['Safari'] = [4.5]
+    data['Opera'] = [2.3]
+    pe.save_as(
+        adict=data,
+        dest_title=title,
+        dest_chart_type='pie',
+        dest_file_name='pie.png'
+    )
+    _validate_and_remove('pie.png')
+
+
 def _validate_and_remove(file_name):
     from filecmp import cmp
     status = cmp(file_name, _fixture_file(file_name))
