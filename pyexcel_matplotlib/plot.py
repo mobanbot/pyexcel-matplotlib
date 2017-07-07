@@ -38,7 +38,8 @@ class Pie(Plotter):
             sheet.name_columns_by_row(label_y_in_row)
         the_dict = sheet.to_dict()
         fig, ax = plt.subplots()
-        ax.pie(the_dict.values(), labels=the_dict.keys(), **keywords)
+        ax.pie(list(the_dict.values()),
+               labels=list(the_dict.keys()), **keywords)
         ax.axis('equal')
         ax.set_title(title)
         fig.savefig(self._image_stream, format=self._file_type)
