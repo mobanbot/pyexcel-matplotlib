@@ -6,4 +6,5 @@ current_version: "0.0.1"
 release: "0.0.1"
 dependencies: 
   - matplotlib
+  - pyexcel>=0.5.0
 description: "Draw charts, diagrams using matplotlib"

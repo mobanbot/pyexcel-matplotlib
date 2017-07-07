@@ -40,6 +40,7 @@ CLASSIFIERS = [
 
 INSTALL_REQUIRES = [
     'matplotlib',
+    'pyexcel>=0.5.0',
 ]
 
 
