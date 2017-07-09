@@ -122,7 +122,7 @@ Histogram
 To draw a histogram, heights, starts and stops should be placed sequentially
 in first, second and third columns.
 
-.. pyexcel-table:: histogram_wide_bars.csv
+.. pyexcel-table:: histogram_single.csv
    :width: 300
 
 
@@ -130,9 +130,8 @@ Here is the source code using pyexcel:
 
 .. pyexcel-code::
 
-    sheet = pyexcel.get_sheet(file_name='histogram_wide_bars.csv')
-    svg = sheet.plot(chart_type='histogram',
-         width=600, height=400, explicit_size=True)
+    sheet = pyexcel.get_sheet(file_name='histogram_single.csv')
+    svg = sheet.plot(chart_type='histogram')
 
 
 In order to draw multiple histogram on the same chart, you will need to use a
@@ -140,15 +139,14 @@ Book, each sheet of which become a histogram. Here is how you can draw multiple 
 
 Here is the source code using pyexcel
 
-.. pyexcel-table:: histogram.xlsx
+.. pyexcel-table:: histogram.csv
    :width: 300
 
 				   
 .. pyexcel-code::
 
-    book = pyexcel.get_book(file_name='histogram.xlsx')
-    svg = book.plot(chart_type='histogram',
-         width=600, height=400, explicit_size=True)
+    sheet = pyexcel.get_sheet(file_name='histogram.csv')
+    svg = sheet.plot(chart_type='histogram', alpha=0.5)
 
 XY
 --------------------------------------------------------------------------------

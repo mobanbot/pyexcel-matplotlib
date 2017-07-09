@@ -26,7 +26,6 @@ def test_line_chart():
         dest_x_labels=x_labels,
         dest_chart_type='line',
         dest_file_name='line.png',
-        dest_no_prefix=True
     )
     _validate_and_remove('line.png')
 
@@ -46,7 +45,6 @@ def test_xy_lines():
         dest_chart_type='xy',
         dest_title='XY Cosinus',
         dest_file_name='xy_cosinus.png',
-        dest_no_prefix=True
     )
     _validate_and_remove('xy_cosinus.png')
 
@@ -61,7 +59,6 @@ def test_xy_line():
         dest_chart_type='xy',
         dest_title='XY Cosinus',
         dest_file_name='single_xy_cosinus.png',
-        dest_no_prefix=True
     )
     _validate_and_remove('single_xy_cosinus.png')
 
@@ -81,6 +78,32 @@ def test_pie():
         dest_file_name='pie.png'
     )
     _validate_and_remove('pie.png')
+
+
+def test_single_histogram():
+    sheet_name = 'Wide bars'
+    data = [[5, 5, 2, 1, 4, 5, 6]]
+    pe.save_as(
+        array=data,
+        sheet_name=sheet_name,
+        dest_chart_type='histogram',
+        dest_file_name='single_histogram.png',
+    )
+    _validate_and_remove('single_histogram.png')
+
+
+def test_histogram():
+    sheet_name = 'Wide bars'
+    data = [[5, 5, 2, 1, 4, 5, 6],
+            [1, 1, 2, 3, 4, 8, 9]]
+    pe.save_as(
+        array=data,
+        sheet_name=sheet_name,
+        dest_chart_type='histogram',
+        dest_file_name='histogram.png',
+        dest_alpha=0.5
+    )
+    _validate_and_remove('histogram.png')
 
 
 def _validate_and_remove(file_name):

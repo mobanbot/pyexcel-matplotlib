@@ -11,7 +11,7 @@ Line
 Here is the source code using pyexcel:
 
 .. literalinclude:: ../../tests/test_matplot.py
-   :lines: 15-30
+   :lines: 15-29
    :dedent: 4
 
 
@@ -25,7 +25,7 @@ Histogram
 Here is the source code using pyexcel:
 
 .. literalinclude:: ../../tests/test_matplot.py
-   :lines: 35-44
+   :lines: 96-104
    :dedent: 4
 
 
@@ -40,7 +40,7 @@ Single histogram
 Here is the source code to draw single sheet histogram:
 
 .. literalinclude:: ../../tests/test_matplot.py
-   :lines: 168-176
+   :lines: 84-91
    :dedent: 4
 
 
@@ -60,7 +60,7 @@ Basic XY Lines, drawing cosinus:
 Here is the source code using pyexcel:
 
 .. literalinclude:: ../../tests/test_matplot.py
-   :lines: 50-64
+   :lines: 34-48
    :dedent: 4
 
 
@@ -74,7 +74,7 @@ Single xy line
 Here is the source code to draw single sheet histogram:
 
 .. literalinclude:: ../../tests/test_matplot.py
-   :lines: 181-191
+   :lines: 53-62
    :dedent: 4
 
 Pie chart
@@ -88,7 +88,7 @@ Pie chart
 Here is the source code using pyexcel:
 
 .. literalinclude:: ../../tests/test_matplot.py
-   :lines: 69-82
+   :lines: 67-79
    :dedent: 4
 
 

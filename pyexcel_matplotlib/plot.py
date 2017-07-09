@@ -18,7 +18,7 @@ from lml.plugin import PluginInfo, PluginManager
 from pyexcel.renderer import BinaryRenderer
 
 
-DEFAULT_TITLE = 'pyexcel chart rendered by pygal'
+DEFAULT_TITLE = 'pyexcel chart rendered by matplotlib'
 KEYWORD_CHART_TYPE = 'chart_type'
 DEFAULT_CHART_TYPE = 'bar'
 
@@ -41,6 +41,18 @@ class Pie(Plotter):
         ax.pie(list(the_dict.values()),
                labels=list(the_dict.keys()), **keywords)
         ax.axis('equal')
+        ax.set_title(title)
+        fig.savefig(self._image_stream, format=self._file_type)
+
+
+@PluginInfo('plot', tags=['histogram'])
+class Histogram(Plotter):
+    def render_sheet(self, sheet, title=DEFAULT_TITLE,
+                     **keywords):
+        fig, ax = plt.subplots()
+        for row in sheet.rows():
+            ax.hist(row,
+                    **keywords)
         ax.set_title(title)
         fig.savefig(self._image_stream, format=self._file_type)
 
