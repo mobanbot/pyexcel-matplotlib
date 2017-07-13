@@ -17,8 +17,28 @@ pyexcel-matplotlib - Let you focus on presentation with matplotlib
 .. image:: https://readthedocs.org/projects/pyexcel-matplotlib/badge/?version=latest
    :target: http://pyexcel-matplotlib.readthedocs.org/en/latest/
 
+Support the project
+================================================================================
 
-**pyexcel-matplotlib** does xyz.
+If your company has embedded pyexcel and its components into a revenue generating
+product, please `support me on patreon <https://www.patreon.com/bePatron?u=5537627>`_ to
+maintain the project and develop it further.
+
+If you are an individual, you are welcome to support me too on patreon and for however long
+you feel like to. As a patreon, you will receive
+`early access to pyexcel related contents <https://www.patreon.com/pyexcel/posts>`_.
+
+With your financial support, I will be able to invest
+a little bit more time in coding, documentation and writing interesting posts.
+
+
+
+Introduction
+================================================================================
+**pyexcel-matplotlib** draws charts, diagrams using matplotlib
+
+.. image:: https://github.com/pyexcel/pyexcel-matplotlib/raw/master/matplotlib-demo.gif
+
 
 
 
@@ -39,21 +59,6 @@ or clone it and install it:
     $ cd pyexcel-matplotlib
     $ python setup.py install
 
-
-
-Support the project
-================================================================================
-
-If your company has embedded pyexcel and its components into a revenue generating
-product, please `support me on patreon <https://www.patreon.com/bePatron?u=5537627>`_ to
-maintain the project and develop it further.
-
-If you are an individual, you are welcome to support me too on patreon and for however long
-you feel like to. As a patreon, you will receive
-`early access to pyexcel related contents <https://www.patreon.com/pyexcel/posts>`_.
-
-With your financial support, I will be able to invest
-a little bit more time in coding, documentation and writing interesting posts.
 
 
 Development guide
@@ -125,6 +130,7 @@ Acceptance criteria
 #. Passes all Travis CI builds
 #. Has fair amount of documentation if your change is complex
 #. Agree on NEW BSD License for your contribution
+
 
 
 

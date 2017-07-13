@@ -3,7 +3,7 @@ import os
 import sys
 sys.path.append(os.path.abspath('.'))
 DESCRIPTION = (
-    'Draw charts, diagrams using matplotlib' +
+    'draws charts, diagrams using matplotlib' +
     ''
 )
 extensions = [
